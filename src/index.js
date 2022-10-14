@@ -1,7 +1,18 @@
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
-import NavBar from './components/NavBar';
+import Title from "./components/Title";
+import NavBar from "./components/NavBar";
+import "./index.css";
 
+const root = createRoot(document.getElementById("root"));
 
+function App() {
+  return (
+    <>
+      <Title />
+      <NavBar />
+    </>
+  )
+}
 
-ReactDOM.render(<NavBar />, document.getElementById('root'));
+root.render(<App />);
