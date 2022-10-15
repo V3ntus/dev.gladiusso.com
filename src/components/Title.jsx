@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring, animated, config, to } from '@react-spring/web';
+import { useSpring, animated, to } from '@react-spring/web';
 
 export default function Title() {
   const [showState, setShowState] = React.useState(false);
@@ -15,7 +15,10 @@ export default function Title() {
     x: showState ? 42 : 0,
     y: showState ? 0 : -150,
     z: showState ? -20 : 0,
-    config: config.slow
+    config: {
+      tension: 80,
+      friction: 11
+    }
   });
 
   React.useEffect(() => {
@@ -33,6 +36,13 @@ export default function Title() {
   return (
     <animated.div
       style={{
+        display: o.to((o) => {
+          if (o === 0) {
+            return 'none'
+          } else {
+            return 'initial'
+          }
+        }),
         width: "100%",
         height: "98vh",
         backgroundColor: "#1A1A1A",

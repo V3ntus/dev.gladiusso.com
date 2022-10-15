@@ -4,7 +4,7 @@
 }
 
 html {
-  background-color: #282828;
+  background-color: rgb(27, 27, 27);
 }
 
 * {
@@ -45,4 +45,17 @@ html {
 #title-col3-1 {
   grid-column: 3;
   grid-row: 2;
+}
+
+#animated-menu-btn::after {
+  border: 1px solid hsla(0, 0%, 100%, 0.2);
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(39, 39, 39, 0);
 }
