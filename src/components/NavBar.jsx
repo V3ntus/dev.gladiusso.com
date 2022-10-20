@@ -24,32 +24,23 @@ export default function NavBar() {
   }, [])
 
   return (
-    <animated.div style={{
+    <animated.div className='navbar-container' style={{
       position: 'fixed',
       top: y.to((y) => `${y}px`),
       left: 0,
       width: '100%',
       paddingTop: '24px',
       paddingBottom: '64px',
-      zIndex: -1,
+      zIndex: 1,
       opacity: o.to((o) => o),
-      background: 'rgb(0,0,0)',
-      background: '-moz-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)', // eslint-disable-line no-dupe-keys
-      background: '-webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)', // eslint-disable-line no-dupe-keys
-      background: 'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)', // eslint-disable-line no-dupe-keys
-      filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1)' // eslint-disable-line no-dupe-keys
+      background: 'rgb(0,0,0) '+
+        '-moz-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%) ' +
+        '-webkit-linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%) ' +
+        'linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
+      filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1)'
     }}>
-      <h1 style={{
-        display: 'inline-block',
-        fontWeight: 100,
-        letterSpacing: '12px',
-        paddingLeft: '64px'
-      }}>VENTUS</h1>
-      <span style={{  
-        display: 'inline-block',
-        marginLeft: '24px',
-        color: '#aaaaaa'
-      }}>DEVELOPER PROFILE</span>
+      <h1>VENTUS</h1>
+      <span>DEVELOPER PROFILE</span>
       <animated.div style={{
         float: 'right',
         marginRight: '6vw',

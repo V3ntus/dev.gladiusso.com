@@ -13,6 +13,10 @@ html {
   color: white;
 }
 
+*::-webkit-scrollbar, *::-webkit-scrollbar-track, *::-webkit-scrollbar-thumb {
+  display: none;
+}
+
 #title-grid-container > h1 {
   margin: 0;
   padding: 0;
@@ -58,4 +62,25 @@ html {
   height: 100%;
   z-index: -1;
   background: rgba(39, 39, 39, 0);
+}
+
+.navbar-container h1 {
+  display: inline-block;
+  font-weight: 100;
+  letter-spacing: 12px;
+  padding-left: 64px;
+}
+
+.navbar-container span {
+  display: inline-block;
+  margin-left: 24px;
+  color: #aaaaaa;
+}
+
+@media screen and (max-width: 455px){
+  .navbar-container h1, .navbar-container span {
+    padding: 0;
+    margin: 0 24px;
+    display: block;
+  }
 }
